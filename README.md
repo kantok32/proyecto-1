@@ -1,94 +1,172 @@
-📝 README - Calculadora de Descuentos
+Proyecto_1 - Exportación de Productos
 
-📘 Instrucciones de Uso
+Descripción del Programa
 
-Ingreso de datos:
+El programa Proyecto_1 es una calculadora automatizada diseñada para calcular el precio final de productos que serán exportados. El sistema permite seleccionar un producto, calcular su precio con impuestos, aplicar descuentos por cantidad y categoría, y determinar el costo de envío según el destino. Al final, muestra un resumen detallado con el costo total a pagar.
 
-Ingresa el nombre del producto.
+🔧 Funcionalidades del Programa
 
-Especifica el precio unitario (debe ser mayor a 0).
+Leer el precio original del producto.
 
-Especifica la cantidad a comprar (debe ser mayor a 0).
+El programa solicita al usuario que seleccione uno de los tres productos disponibles:
 
-Cálculo de subtotal:
+Leche (unidad de 200 ml)
 
-El sistema calcula el subtotal multiplicando el precio unitario por la cantidad de productos.
+Comida de perro (kg)
 
-Aplicación de descuentos:
+Comida de gato (kg)
 
-Se aplica el descuento correspondiente según la cantidad comprada.
+Cada producto tiene un precio base que será usado para los cálculos.
 
-Cálculo del total a pagar:
+Aplicar impuestos al producto (IVA del 19%).
 
-El sistema resta el descuento del subtotal para calcular el total a pagar.
+Una vez seleccionado el producto, se calcula el precio unitario con IVA. El IVA es del 19% sobre el precio base.
 
-Ingreso del monto del cliente:
+Solicitar la cantidad de producto.
 
-El cliente debe ingresar con cuánto va a pagar. Si el monto no es suficiente, se solicita un monto adicional.
+El programa solicita la cantidad de unidades o kilogramos que se desea comprar.
 
-Cálculo de cambio:
+Aplicar un descuento por cantidad si es aplicable.
 
-Si el monto ingresado es mayor al total a pagar, se calcula el cambio y se muestra al cliente.
+Si el cliente compra más de 100 unidades de leche o 100 kg de comida, se aplica un descuento adicional del 10% sobre el valor total de los productos antes de impuestos.
 
-Resumen de la compra:
+Calcular el costo de envío basado en el destino.
 
-Se muestra un resumen con todos los detalles de la compra, incluyendo el producto, cantidad, subtotal, descuento aplicado, total a pagar y, si corresponde, el cambio.
+El costo de envío varía según la zona de entrega:
 
-⚙️ Estructura del Algoritmo
+Santiago: $0 (envío gratuito).
 
-1️⃣ Entrada de Datos
+Zona Centro: 20% del valor después del descuento por cantidad.
 
-Solicitud de nombre del producto, precio y cantidad.
+Norte: 40% del valor después del descuento por cantidad.
 
-Validación de que los valores sean positivos.
+Sur: 60% del valor después del descuento por cantidad.
 
-2️⃣ Cálculo del Subtotal
+Aplicar un descuento por categoría de cliente.
 
-Subtotal = precio * cantidad
+El programa ofrece dos opciones de descuento por categoría de cliente:
 
-3️⃣ Aplicación de Descuentos
+Sin descuento: No se aplica ningún descuento adicional.
 
-Si la cantidad está entre 10 y 19 → 10% de descuento
+Alumno UDD: Descuento adicional del 15% sobre el valor total después del envío.
 
-Si la cantidad está entre 20 y 49 → 20% de descuento
+Calcular el costo final del producto.
 
-Si la cantidad es 50 o más → 30% de descuento
+El costo final se calcula sumando:
 
-4️⃣ Cálculo del Total
+Precio unitario con IVA × Cantidad.
 
-Total = subtotal - descuento
+Descuento por cantidad aplicado (si corresponde).
 
-5️⃣ Pago y Cambio
+Costo de envío (según destino).
 
-El cliente debe ingresar un monto suficiente para pagar el total.
+Descuento final por categoría de cliente (si corresponde).
 
-Si el monto es mayor al total, se calcula y muestra el cambio.
+Mostrar un resumen final detallado.
 
-6️⃣ Resumen de la Compra
+El programa muestra un resumen con los siguientes datos:
 
-Se muestra un resumen con los detalles de la transacción.
+Producto seleccionado.
 
-// Ingreso del pago por parte del cliente
-Escribir "El total a pagar es: ", total_a_pagar
-Escribir "¿Con cuánto pagará?:"
-Leer monto_cliente
+Cantidad comprada.
 
-Mientras monto_cliente < total_a_pagar Hacer
-    Escribir "El monto ingresado es insuficiente. Intente de nuevo."
-    Leer monto_cliente
-FinMientras
+Precio unitario con IVA.
 
-// Cálculo del cambio
-cambio <- monto_cliente - total_a_pagar
+Valor total de productos antes del descuento.
 
-Si monto_cliente > total_a_pagar Entonces
-    Escribir "Cambio: ", cambio
-FinSi
+Descuento por cantidad aplicado.
 
-Escribir "Gracias por su compra."
+Valor después del descuento por cantidad.
 
-📚 Conclusión
+Costo de envío.
 
-La Calculadora de Descuentos es una herramienta práctica que permite automatizar el proceso de cálculo de precios, descuentos y pagos en cualquier tipo de transacción comercial. La lógica simple y clara asegura que sea fácil de entender e implementar en cualquier lenguaje de programación. Ideal para tiendas físicas o proyectos educativos sobre programación y algoritmos.
+Valor total después del envío.
 
-💡 Sugerencia: Para personalizar este algoritmo, puedes cambiar los porcentajes de descuento, la validación de entradas o incluso agregar más detalles en el resumen de compra.
+Descuento final aplicado.
+
+Valor total a pagar.
+
+📊 Ejemplo de Ejecución del Programa
+
+Entrada del Usuario:
+
+Producto seleccionado: Leche.
+
+Cantidad: 120 unidades.
+
+Destino: Zona Centro.
+
+Categoría de descuento: Alumno UDD.
+
+Salida del Programa:
+
+Producto seleccionado: Leche
+Cantidad: 120
+Precio unitario con IVA: $238
+Valor total de productos antes del descuento: $28560
+Descuento por cantidad aplicado: $2856
+Valor después del descuento por cantidad: $25704
+Costo de envío: $5140
+Valor total después del envío: $30844
+Descuento final aplicado: $4626
+Valor total a pagar: $26218
+
+Gracias por su compra.
+
+📌 Dónde se aplican los conceptos principales:
+
+Concepto
+
+Descripción
+
+Dónde se aplica en el programa
+
+Leer el precio original
+
+Se selecciona el producto y se obtiene su precio base.
+
+Sección de selección de producto.
+
+Aplicar impuestos
+
+Se calcula el precio unitario con IVA del 19%.
+
+Sección de cálculo del precio unitario con IVA.
+
+Aplicar descuento por cantidad
+
+Se aplica un descuento del 10% si se compran más de 100 unidades.
+
+Sección de cálculo del descuento por cantidad.
+
+Calcular costo de envío
+
+El costo de envío se basa en el destino seleccionado.
+
+Sección de cálculo del costo de envío.
+
+Aplicar descuento por categoría
+
+Se aplica un 15% de descuento si el cliente es Alumno UDD.
+
+Sección de aplicación del descuento final.
+
+Calcular el costo final
+
+Se calcula el valor total sumando todos los componentes.
+
+Sección de cálculo del valor total a pagar.
+
+🧩 Conclusión
+
+Este programa permite calcular el precio final de productos exportados, aplicando impuestos, descuentos por cantidad y descuentos según la categoría del cliente. Además, calcula el costo de envío según la zona de entrega y muestra un resumen detallado de la compra.
+
+Puedes personalizar este programa para agregar más productos, categorías de descuento o tarifas de envío según tus necesidades.
+
+⚡ Recomendaciones de Uso
+
+Verifica los cálculos: Asegúrate de ingresar los valores correctamente.
+
+Actualiza los precios: Si los precios de los productos cambian, actualiza las variables correspondientes.
+
+Prueba diferentes combinaciones: Realiza pruebas con diferentes productos, cantidades y destinos para validar que el programa funcione correctamente.
