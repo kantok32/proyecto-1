@@ -58,14 +58,30 @@ El programa **Proyecto_1** es una calculadora automatizada diseñada para calcul
      - Descuento final aplicado.
      - Valor total a pagar.
 
+
+## 📌 **Dónde se aplican los conceptos principales:**
+
+| **Concepto**               | **Descripción**                                                     | **Dónde se aplica en el programa**                         |
+|----------------------------|---------------------------------------------------------------------|------------------------------------------------------------|
+| Leer el precio original     | Se selecciona el producto y se obtiene su precio base.              | Sección de selección de producto.                         |
+| Aplicar impuestos           | Se calcula el precio unitario con IVA del 19%.                     | Sección de cálculo del precio unitario con IVA.            |
+| Aplicar descuento por cantidad | Se aplica un descuento del 10% si se compran más de 100 unidades. | Sección de cálculo del descuento por cantidad.             |
+| Calcular costo de envío     | El costo de envío se basa en el destino seleccionado.               | Sección de cálculo del costo de envío.                     |
+| Aplicar descuento por categoría | Se aplica un 15% de descuento si el cliente es Alumno UDD.       | Sección de aplicación del descuento final.                 |
+| Calcular el costo final     | Se calcula el valor total sumando todos los componentes.            | Sección de cálculo del valor total a pagar.                |
+
 ---
 
-## 📊 **Ejemplo de Ejecución del Programa**
+## 🧩 **Conclusión**
+Este programa permite calcular el precio final de productos exportados, aplicando impuestos, descuentos por cantidad y descuentos según la categoría del cliente. Además, calcula el costo de envío según la zona de entrega y muestra un resumen detallado de la compra.
 
-### Entrada del Usuario:
-- **Producto seleccionado:** Leche.
-- **Cantidad:** 120 unidades.
-- **Destino:** Zona Centro.
-- **Categoría de descuento:** Alumno UDD.
+Puedes personalizar este programa para agregar más productos, categorías de descuento o tarifas de envío según tus necesidades.
 
-### Salida del Programa:
+---
+
+## ⚡ **Recomendaciones de Uso**
+- **Verifica los cálculos:** Asegúrate de ingresar los valores correctamente.
+- **Actualiza los precios:** Si los precios de los productos cambian, actualiza las variables correspondientes.
+- **Prueba diferentes combinaciones:** Realiza pruebas con diferentes productos, cantidades y destinos para validar que el programa funcione correctamente.
+"""
+
